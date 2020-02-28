@@ -11,6 +11,8 @@ import java.util.StringTokenizer;
 
 public class Assignment2a {
 
+	private static Scanner input;
+
 	public static void permutermIndex(String fileName) throws IOException {
 
 		List<String> stopwords = Files.readAllLines(Paths.get("common_stopwords.txt"));
@@ -69,7 +71,7 @@ public class Assignment2a {
 
 	public static void main(String[] args) throws IOException {
 		String file = "";
-		Scanner input = new Scanner(System.in);
+		input = new Scanner(System.in);
 		System.out.println("Please enter the file you want a permuterm index of: ");
 		file = input.next();
 
