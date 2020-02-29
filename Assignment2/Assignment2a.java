@@ -1,3 +1,4 @@
+
 /**Assignment 2 - Permutation Index - Assignment2a Class
  * @Class: COSC 4315
  * @Professor: Dr. Leonard Brown
@@ -55,6 +56,7 @@ public class Assignment2a {
 
 		// while there is still lines to read in
 		while (file.hasNextLine()) {
+
 			// create tokens of the next line in the file
 			StringTokenizer st = new StringTokenizer(file.nextLine());
 
@@ -86,8 +88,10 @@ public class Assignment2a {
 
 		// removing duplicate words
 		for (int i = 1; i < list.size(); i++) {
+
 			// if the current word is equal to the word before
 			if (list.get(i).equals(list.get(i - 1))) {
+
 				// remove the word before and correct the current location in our for loop
 				list.remove(i - 1);
 				i = i - 1;
@@ -106,6 +110,7 @@ public class Assignment2a {
 
 			// while the first character of the permutation is not equal to $
 			while (!base.substring(0, 1).equals("$")) {
+
 				// set our base equal to the current base with the first letter rotated to the
 				// end
 				base = base.substring(1, base.length()) + base.substring(0, 1);
@@ -127,12 +132,14 @@ public class Assignment2a {
 	// main() method takes a user input for a file name and creates a permutermIndex
 	// of the file.
 	public static void main(String[] args) throws IOException {
+
 		// initializing our variables
 		String file = "";
 		input = new Scanner(System.in);
 
 		// prompting for user input
 		System.out.println("Please enter the file you want a permuterm index of: ");
+
 		// reading the next input by the user
 		file = input.nextLine();
 
